@@ -1,0 +1,198 @@
+/* Modern and Professional Styles with Dark/Light Theme */
+
+/* Root CSS Variables for Theme Customization */
+:root {
+    --bg-color: #f4f7f6;         /* Default light background color */
+    --text-color: #333;         /* Default dark text color */
+    --primary-color: #007bff;    /* Primary blue color */
+    --secondary-color: #e9ecef;  /* Secondary light gray color */
+    --container-bg: #fff;       /* Container background color */
+    --container-shadow: rgba(0, 0, 0, 0.1); /* Container shadow color */
+    --border-color: #ccc;        /* Border color */
+    --result-bg: #e9ecef;        /* Result section background color */
+    --result-border: #ddd;      /* Result section border color */
+}
+
+/* Dark Theme Variables (override :root variables) */
+body.dark-theme {
+    --bg-color: #121212;         /* Dark background color for dark theme */
+    --text-color: #eee;         /* Light text color for dark theme */
+    --container-bg: #212121;   /* Dark container background color */
+    --container-shadow: rgba(255, 255, 255, 0.1); /* Light container shadow for dark theme */
+    --border-color: #555;        /* Dark border color for dark theme */
+    --result-bg: #333;          /* Dark result section background color */
+    --result-border: #444;      /* Dark result section border color */
+}
+
+
+/* General Styles */
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color); /* Using CSS variable for background color */
+    color: var(--text-color);       /* Using CSS variable for text color */
+    direction: ltr; /* Left-to-right text direction for English */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme change */
+}
+
+.container {
+    background-color: var(--container-bg); /* Using CSS variable for container background */
+    padding: 40px; /* Increased padding */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 20px var(--container-shadow); /* More pronounced shadow */
+    text-align: center;
+    max-width: 900px; /* Increased max width */
+    width: 95%;
+    margin: 30px; /* Increased margin */
+    display: flex; /* Flexbox layout for container */
+    flex-direction: column; /* Stack header, textarea, button, result, footer */
+}
+
+header {
+    margin-bottom: 30px; /* Increased margin below header */
+    display: flex; /* Flexbox for header elements */
+    justify-content: space-between; /* Space out title and toggle button */
+    align-items: center; /* Vertically align items in header */
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin: 0; /* Reset default margin */
+    font-size: 2.5rem; /* Larger title font size */
+}
+
+/* Theme Toggle Button Styles */
+#themeToggle {
+    background: none;
+    color: var(--text-color);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 10px; /* Add padding for better touch area */
+    border-radius: 50%; /* Make it circular */
+    outline: none; /* Remove default focus outline */
+}
+
+#themeToggle:hover {
+    color: var(--primary-color); /* Hover effect */
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px; /* Increased margin below textarea */
+    border: 2px solid var(--border-color); /* Thicker border */
+    border-radius: 10px;
+    font-size: 1.1rem;
+    resize: vertical;
+    font-family: inherit;
+    background-color: var(--container-bg); /* Textarea background color */
+    color: var(--text-color);           /* Textarea text color */
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+textarea:focus {
+    outline: none; /* Remove focus outline */
+    border-color: var(--primary-color); /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add focus shadow */
+}
+
+
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 15px 35px; /* Adjusted button padding */
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight scale up on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight scale down on active */
+}
+
+
+#result {
+    margin-top: 40px; /* Increased margin above result */
+    padding: 25px; /* Increased padding for result section */
+    background-color: var(--result-bg); /* Using CSS variable for result background */
+    border-radius: 10px;
+    border: 1px solid var(--result-border); /* Using CSS variable for result border */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+}
+
+#result h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px; /* Increased margin below result title */
+    font-size: 1.8rem; /* Larger result title font size */
+}
+
+#result p {
+    font-size: 1.1rem; /* Slightly larger result text font size */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+
+footer {
+    margin-top: 40px; /* Increased margin above footer */
+    color: #777; /* Lighter footer text color */
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0; /* Reset default paragraph margin */
+}
+
+.developer-name {
+    color: var(--primary-color); /* Highlight developer name with primary color */
+    font-weight: bold; /* Make developer name bold */
+}
+
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        margin: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    textarea, button, #result {
+        font-size: 1rem;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 12px 30px;
+    }
+
+    #result {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}

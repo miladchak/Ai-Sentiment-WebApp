@@ -84,7 +84,8 @@ header h1 {
 
 textarea {
     width: 100%;
-    padding: 15px;
+    padding: 10px 0 10px 0;
+    text-align: center;
     margin-bottom: 30px; /* Increased margin below textarea */
     border: 2px solid var(--border-color); /* Thicker border */
     border-radius: 10px;

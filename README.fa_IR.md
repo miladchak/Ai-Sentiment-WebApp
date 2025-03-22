@@ -36,8 +36,8 @@
 1.  **دریافت کد پروژه:** ریپازیتوری گیت‌هاب پروژه را کلون کنید.
 
     ```bash
-    git clone [آدرس ریپازیتوری گیت‌هاب]
-    cd sentiment_analysis_app
+    git clone https://github.com/miladchak/Ai-Sentiment-WebApp.git
+    cd Ai-Sentiment-WebApp
     ```
 
 2.  **ورود به دایرکتوری بک‌اند:**
@@ -49,7 +49,7 @@
 3.  **ایجاد محیط مجازی (توصیه اکید):**
 
     ```bash
-    python -m venv venv
+    python -m venv venv or python3 -m venv venv
     ```
 
 4.  **فعال‌سازی محیط مجازی:**

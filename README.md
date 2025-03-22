@@ -36,7 +36,7 @@ Follow these steps to run the project locally or on a server:
 1.  **Get the Project Code:** Clone the GitHub repository.
 
     ```bash
-    git clone [GitHub repository URL]
+    git clone https://github.com/miladchak/Ai-Sentiment-WebApp.git
     cd sentiment_analysis_app
     ```
 

@@ -37,7 +37,7 @@ Follow these steps to run the project locally or on a server:
 
     ```bash
     git clone https://github.com/miladchak/Ai-Sentiment-WebApp.git
-    cd sentiment_analysis_app
+    cd Ai-Sentiment-WebApp
     ```
 
 2.  **Enter Backend Directory:**
@@ -49,7 +49,7 @@ Follow these steps to run the project locally or on a server:
 3.  **Create Virtual Environment (Highly Recommended):**
 
     ```bash
-    python -m venv venv
+    python -m venv venv or python3 -m venv venv
     ```
 
 4.  **Activate Virtual Environment:**
